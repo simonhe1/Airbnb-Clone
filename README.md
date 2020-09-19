@@ -5,7 +5,7 @@ Versions:
 - Node: v12.18.1
 - Npm: 6.12.1
 
-This application is hosted live on
+This application is hosted live on https://airbnb-clone-ad5d3.web.app
 
 To make your own application, you have to set up your own firebase and have packages installed.
 
@@ -20,7 +20,6 @@ To do this:
    - material-ui/core
    - material-ui/icons
    - react-date-range
-   - axios
 3. To set up firebase, go to the [firebase website](https://firebase.google.com/)
    1. If you haven't done so, make an account
    2. Create a new project and name it (Make sure you tick firebase hosting)
