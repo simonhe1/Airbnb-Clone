@@ -4,14 +4,20 @@ import { Button } from "@material-ui/core";
 import SearchDates from "./SearchDates";
 import { useHistory } from "react-router-dom";
 
-const Banner = () => {
+const Banner = ({ startDate, endDate, handleUpdate }) => {
   const [showSearchDates, setShowSearchDates] = useState(false);
   const history = useHistory();
 
   return (
     <div className="banner">
       <div className="banner_search">
-        {showSearchDates && <SearchDates />}
+        {showSearchDates && (
+          <SearchDates
+            startDate={startDate}
+            endDate={endDate}
+            handleUpdate={handleUpdate}
+          />
+        )}
         <Button
           variant="outlined"
           className="banner_search_button"

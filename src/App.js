@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -7,6 +7,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchPage from "./SearchPage";
 
 const App = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
+  const updateDates = (start, end) => {
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   return (
     <div className="app">
       <Router>
@@ -14,23 +22,20 @@ const App = () => {
 
         <Switch>
           <Route path="/search">
-            <SearchPage />
+            <SearchPage startDate={startDate} endDate={endDate} />
           </Route>
 
           <Route path="/">
-            <Home />
+            <Home
+              startDate={startDate}
+              endDate={endDate}
+              handleUpdate={updateDates}
+            />
           </Route>
         </Switch>
 
         <Footer />
       </Router>
-
-      {/* <Search /> */}
-
-      {/* <Cards /> */}
-
-      {/* <SearchPage /> */}
-      {/* <... /> */}
     </div>
   );
 };

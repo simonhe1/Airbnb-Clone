@@ -20,7 +20,7 @@ const SearchResult = ({
           <p>{location}</p>
           <h3>{title}</h3>
           <p>____</p>
-          <p>description</p>
+          <p>{description}</p>
         </div>
 
         <div className="search_result_info_bottom">

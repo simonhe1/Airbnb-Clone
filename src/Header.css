@@ -26,10 +26,14 @@
   border-radius: 999px;
 }
 
-.header_center > input {
+.header_center_search > input {
   border: none;
   outline-width: 0;
   padding: 10px;
+}
+
+.header_center_search > button:hover {
+  background-color: transparent;
 }
 
 .header_right {
