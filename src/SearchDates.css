@@ -1,8 +1,9 @@
 .search_dates {
   position: absolute;
   top: 35px;
-  left: 25px;
+  left: 25%;
   width: 100vw;
+  z-index: 99;
 }
 
 .search_dates > h2 {
